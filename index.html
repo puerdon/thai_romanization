@@ -49,7 +49,7 @@
 </head>
 <body>
     <div class="container">
-        <h2>Text Processor</h2>
+        <h2>泰文轉羅馬拼音 Thai Romanization</h2>
         <textarea id="inputText" placeholder="Enter your text here..."></textarea>
         <button onclick="processText()">Process Text</button>
         <div id="result" class="result"></div>
@@ -75,7 +75,8 @@
                 }
 
                 const data = await response.json();
-                resultDiv.innerHTML = `<strong>Result:</strong> ${data.output}`;
+                const outputString = data.output_string.replace(/\n/g, '<br>');
+                resultDiv.innerHTML = `<strong>Result:</strong><br>${outputString}`;
             } catch (error) {
                 resultDiv.innerHTML = `<strong>Error:</strong> ${error.message}`;
             }
