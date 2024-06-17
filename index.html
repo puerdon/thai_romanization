@@ -75,7 +75,7 @@
                 }
 
                 const data = await response.json();
-                const outputString = data.output_string.replace(/\n/g, '<br>');
+                const outputString = data.output.replace(/\n/g, '<br>');
                 resultDiv.innerHTML = `<strong>Result:</strong><br>${outputString}`;
             } catch (error) {
                 resultDiv.innerHTML = `<strong>Error:</strong> ${error.message}`;
