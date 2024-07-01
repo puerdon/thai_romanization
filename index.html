@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Processor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>泰文轉羅馬拼音</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -46,6 +50,17 @@
             border-radius: 4px;
             background: #e9ecef;
         }
+
+        .noto-sans-normal {
+          font-family: "Noto Sans", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 400;
+          font-style: normal;
+          font-variation-settings:
+            "wdth" 100;
+          font-size: 1.5em;
+        }
+
     </style>
 </head>
 <body>
@@ -53,7 +68,7 @@
         <h2>泰文轉羅馬拼音</h2>
         <textarea id="inputText" placeholder="請輸入泰文（可以換行，請勿超過50個詞）"></textarea>
         <button onclick="processText()">送出</button>
-        <div id="result" class="result"></div>
+        <div id="result" class="result noto-sans-normal"></div>
     </div>
 
     <script>
